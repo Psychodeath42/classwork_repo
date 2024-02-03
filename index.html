@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Silly Index</title>
@@ -10,6 +11,15 @@
     <!-- adds header -->
     <header> 
         <h1>What a wacky little guy</h1> 
+        <!-- Dropdown menu -->
+<select id="mediaDropdown" onchange="displayMedia()">
+    <option value="none" selected disabled>Select Media Type</option>
+    <option value="cats">Cats</option>
+    <option value="warcrimes">Warcrimes</option>
+    <option value="possums">Possums</option>
+    <option value="snowboarding_cat">Snowboarding cats</option>
+    <option value="doggy_dango">Doggy get mochi</option>
+</select>
     </header>
     <nav>
         <h2>Navigation</h2>
@@ -19,15 +29,12 @@
     </nav>
 <!-- add paragraph -->
     <p>
-        <img  width="250" id="memeimage" src="memes/warcrimes.gif" alt="an oscillating word art text that says war crimes">
-        <!--New meme this time it is a video-->
-        <video onloadstart="this.volume=0.25" controls width="250" loop id="cat_video">
-            <source src="memes/Cats.mov">
-        </video>
-        <video onloadstart="this.volume=0.25" controls width="250" autoplay muted loop id="possum_video">
-            <source src="memes/chonky possum.mp4">
-        </video>
+        What greater joy is there to be beheld than that of the softness of a kittens fur? Now with two new memes!
     </p>
+    <!-- Display area for selected media -->
+<div id="media-display"></div>
+<!--Link to the script in the akashic tome for organization of code types-->
+<script src="akashic_tome.js"></script>
     <footer>
         Hearth Morris<br>
         University of Advancing Technology<br>

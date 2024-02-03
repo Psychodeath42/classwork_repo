@@ -42,3 +42,25 @@ function roll_die(){
     //how to round to get rid of the pesky decimals
     return Math.ceil(die);
 }
+
+// Drop down menu code
+function displayMedia() {
+    var selectedValue = document.getElementById("mediaDropdown").value;
+    var displayArea = document.getElementById("media-display");
+
+    // Clear previous content
+    displayArea.innerHTML = "";
+
+    // Display media based on selection
+    if (selectedValue === "cats") {
+        displayArea.innerHTML = '<video onloadstart="this.volume=0.25" controls src="memes/Cats.mov" ></video>';
+    } else if (selectedValue === "warcrimes") {
+        displayArea.innerHTML = '<img src="memes/warcrimes.gif" alt="Image">';
+    } else if (selectedValue === "possums") {
+        displayArea.innerHTML = '<video onloadstart="this.volume=0.25" controls src="memes/chonky_possum.mp4"></video>';
+    } else if (selectedValue === "snowboarding_cat") {
+        displayArea.innerHTML = '<video onloadstart="this.volume=0.25" controls src="memes/cat_snowboard.mp4"></video>';
+    } else if (selectedValue === "doggy_dango") {
+        displayArea.innerHTML = '<video onloadstart="this.volume=0.25" controls src="memes/doggy_dango.mp4"></video>';
+    }
+}
