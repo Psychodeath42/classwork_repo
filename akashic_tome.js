@@ -1,6 +1,6 @@
 //the omni-tool function command, how i loathe thee
 function play_craps(){
-    //the divine beings must hear harold of my arival
+    //the divine beings must hear harold of my arrival
     console.log("play_craps was called");
     //the dice of fate must be cast for the world to see
     var die1 = roll_die();
@@ -25,7 +25,7 @@ function play_craps(){
         document.getElementById("craps_result").innerHTML = "Fate has forsaken you today";
     }
     // how the beings of yore praytold that the numerical symbols were both even and equal
-    else if(die1 == die2 && die1 % 2 == 0){
+    else if(die1 == die2 && die1 % die2 == 0){
         document.getElementById("craps_result").innerHTML = "Fate smiles upon your good fortune";
 
     }
@@ -35,6 +35,8 @@ function play_craps(){
         
     }
 }
+
+
 //how the fates shall decide their allegience
 function roll_die(){
     //a random number between 1-0
@@ -42,6 +44,7 @@ function roll_die(){
     //how to round to get rid of the pesky decimals
     return Math.ceil(die);
 }
+
 
 // Drop down menu code
 function displayMedia() {
@@ -62,5 +65,7 @@ function displayMedia() {
         displayArea.innerHTML = '<video onloadstart="this.volume=0.25" controls src="memes/cat_snowboard.mp4"></video>';
     } else if (selectedValue === "doggy_dango") {
         displayArea.innerHTML = '<video onloadstart="this.volume=0.25" controls src="memes/doggy_dango.mp4"></video>';
+    } else if (selectedValue === "otter_jazz") {
+        displayArea.innerHTML = '<video onloadstart="this.volume=0.25" controls src="memes/otter_jazz.mov"></video>';
     }
 }
