@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <script src="akashic_tome.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings Form</title>
+</head>
+<nav>
+    <h2>Navigation</h2>
+    <a href="./index.html">Home</a><br>
+    <a href="./boards.html">Boards</a><br>
+    <a href="./dice_game.html">Dice Game</a><br>
+    <a href="./strings.html">String Form</a><br>
+</nav>
+<body>
+    <h1>Welcome to the Login Page!</h1>
+    <h2>Sacrifice your name to the great fae gods.</h2>
+<!-- creates form to get information -->
+    <form method="post" id="fae_form" onsubmit="return val_login_form();">
+    
+        <label for="first_name">First Name: </label>
+        <input type="text" id="first_name" name="first_name"><br><br>
+
+        <label for="last_name">Last Name: </label>
+        <input type="text" id="last_name" name="last_name"><br><br>
+
+        <label for="zip">Gold Sacrifice: </label>
+        <input type="text" id="zip" name="zip"><br><br>
+
+        <input type="submit" value="submit">
+
+        <div id="return_info"></div>
+        <div id="return_info_zip"></div>
+        <div id="secret_meme"></div>
+    </form>
+</body>
+</html>

@@ -69,3 +69,41 @@ function displayMedia() {
         displayArea.innerHTML = '<video onloadstart="this.volume=0.25" controls src="memes/otter_jazz.mov"></video>';
     }
 }
+
+// our function to validate the log in information
+function val_login_form() {
+
+// gets the name variable from the html and puts it as a jscript var
+    var first_name = document.getElementById("first_name").value;
+
+    var last_name = document.getElementById("last_name").value;
+
+    var zip = document.getElementById("zip").value;
+
+    console.log("first name:"+ first_name);
+    console.log("last name:"+ last_name);
+    console.log("zip code:"+ zip);
+
+    // create variable to consolidate the info
+    var full_info = first_name + " " + last_name;
+    console.log("full name: " + full_info);
+    // checks for greater than 20 characters or if no characters were inputted
+    if (full_info.length > 20 || full_info.length == 1){
+        console.log("Invalid name");
+        document.getElementById("return_info").innerHTML ="You have angered the ArchFae";
+    }
+    else if (zip.length != 5){
+        console.log ("invalid zipcode");
+        document.getElementById("return_info_zip").innerHTML ="Your presence is displeasing the entities";
+    }
+    else{
+        console.log("Sacrifice accepted");
+        alert("Your name has been forfeited to the ArchFae");
+        document.getElementById("return_info_zip").innerHTML ="";
+        document.getElementById("return_info").innerHTML ="";
+        document.getElementById("secret_meme").innerHTML ='<video onloadstart="this.volume=0.25" controls src="memes/eek_the_cat.mp4"></video>';
+
+    }
+
+    return false
+}
