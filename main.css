@@ -12,19 +12,22 @@ nav {
     padding: 5px;
     line-height: 30px;
 }
-
+#media_display {
+    margin-left: 600px;
+}
 /* footer properties */
 footer {
     text-align: center;
     margin-right: 200px;
 }
 
-/* memeImage properties */
-memeImage {
-    margin-right: 200px;
-}
-
 /* header properties */
 header {
     text-align: center;
+}
+
+#dvd_icon {
+    height: 100px;
+    width: 100px;
+    position: absolute;
 }

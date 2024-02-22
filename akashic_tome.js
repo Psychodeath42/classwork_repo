@@ -67,6 +67,8 @@ function displayMedia() {
         displayArea.innerHTML = '<video onloadstart="this.volume=0.25" controls src="memes/doggy_dango.mp4"></video>';
     } else if (selectedValue === "otter_jazz") {
         displayArea.innerHTML = '<video onloadstart="this.volume=0.25" controls src="memes/otter_jazz.mov"></video>';
+    }else if (selectedValue === "dummy_guy") {
+        displayArea.innerHTML = '<video onloadstart="this.volume=0.25" controls src="memes/dummy_little_guy.mp4"></video>';
     }
 }
 
@@ -106,4 +108,32 @@ function val_login_form() {
     }
 
     return false
+}
+
+var interval_id = 0;
+// function that makes the dvd logo go to a random spot
+function dvd_bounce() {
+// get the dvd logo
+    var DVD = document.getElementById("dvd_icon");
+//sets the interval
+    interval_id = setInterval(function(){
+// get new X co-ord
+        var new_x = get_random_coord();
+//gets new Y co-ord
+        var new_y = get_random_coord();
+// sets the DVD variables position to the new X and Y
+        DVD.style.left = new_x + "px";
+        DVD.style.top = new_y + "px";
+// logs it for my sake
+        console.log("x: " + DVD.style.left + " y: " + DVD.style.top);
+    }, 1000); // the 1000 is equal to 1 second in milliseconds
+// this will move the dvd every one second  
+}
+
+function dvd_stop(){
+    clearInterval(interval_id)
+}
+
+function get_random_coord(){
+    return Math.floor(Math.random() * 1000);
 }
