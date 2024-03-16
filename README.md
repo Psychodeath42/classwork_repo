@@ -6,3 +6,5 @@ repository for classwork
 9-2-24 otter jazz meme has been implemented
 
 22-2-24 dumb economic cat meme and dvd logo have been implemented
+
+16-3-24 palidrome checker and secret lizard dance
