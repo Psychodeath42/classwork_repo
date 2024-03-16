@@ -137,3 +137,59 @@ function dvd_stop(){
 function get_random_coord(){
     return Math.floor(Math.random() * 1000);
 }
+
+function pali_check(){
+
+    document.getElementById("pali_word").innerHTML ="";
+
+    //var pali_word = document.getElementById("pali_word").value;
+    //console.log("THIS= " + pali_word)
+    //console.log(pali_auth(pali_word) );
+    
+    var b_continue = true;
+
+    do{
+        //gets the word from the text input
+        var pali_word = document.getElementById("pali_word").value;
+        // checks text input for palidrome
+        var pali_bool = pali_auth(pali_word)
+
+        var message = "";
+
+        if(pali_bool){
+            message = pali_word + " has been accepted by the council...";
+            
+            document.getElementById("secret_meme2").innerHTML ='<video onloadstart="this.volume=0.25" controls src="memes/lizard_dance.mp4"></video>';
+        }
+        else{
+            message = pali_word + " has incured the wrath of the council!";
+        }
+
+        document.getElementById("pali_result").innerHTML = (message);
+        
+        var still_play = prompt("Do you still wish to submit? y/n")
+
+        if (still_play = "n"){
+            b_continue = false;
+        }
+    }
+
+    while(b_continue);
+}
+
+function pali_auth(pali_word){
+    //get rid of spaces and lower the case of submitted word
+    var pali_clean = pali_word.replace(/\s/g, "").toLowerCase();
+
+    console.log("palidrome=" + pali_clean);
+ //splits it into array and reverses it
+    var word_array = pali_clean.split("");
+
+    var reved_array = word_array.reverse();
+
+    var reved_join = reved_array.join("");
+
+    console.log("reversed word=" + reved_join)
+
+    return pali_clean == reved_join;
+}
