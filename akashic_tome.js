@@ -69,6 +69,8 @@ function displayMedia() {
         displayArea.innerHTML = '<video onloadstart="this.volume=0.25" controls src="memes/otter_jazz.mov"></video>';
     }else if (selectedValue === "dummy_guy") {
         displayArea.innerHTML = '<video onloadstart="this.volume=0.25" controls src="memes/dummy_little_guy.mp4"></video>';
+    }else if (selectedValue === "wiggleabit") {
+        displayArea.innerHTML = '<video onloadstart="this.volume=0.25" controls src="memes/wiggleabit.mp4"></video>';
     }
 }
 
