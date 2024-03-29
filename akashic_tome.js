@@ -195,3 +195,14 @@ function pali_auth(pali_word){
 
     return pali_clean == reved_join;
 }
+
+function add_sound(){
+    //gets area where sound controls will spawn
+    var sound_area = document.getElementById("sound_area");
+// sets that area to the sound and autoplays it
+    sound_area.innerHTML = '<audio onloadstart="this.volume=0.25" autoplay controls loop src="memes/lofi_atmosphere.mp3"></audio> <br>';
+// makes the background a cool forest
+    document.body.style.backgroundImage = "url('memes/forest.jpg')";
+    // sets the text to black for readability
+    document.body.style.color = 'black';
+}

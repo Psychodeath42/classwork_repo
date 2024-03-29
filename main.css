@@ -1,6 +1,11 @@
 /* body properties */
 body {
     background-color: #130831; /* set your preferred background color */
+    background-image: url('');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #ccc3c8; /* set your preferred text color */
 }
 
