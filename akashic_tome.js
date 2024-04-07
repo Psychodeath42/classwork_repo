@@ -206,3 +206,47 @@ function add_sound(){
     // sets the text to black for readability
     document.body.style.color = 'black';
 }
+
+
+
+function riddle_solver() {
+
+    // get my riddles from the page and make string vars out of them
+        var first_riddle = document.getElementById("riddle_1").value;
+    
+        var second_riddle = document.getElementById("riddle_2").value;
+    
+        var third_riddle = document.getElementById("riddle_3").value;
+    // debugging to make sure they get saved
+        console.log("what goes on four feet in the morning, two in the afternoon, and three at night? "+ first_riddle);
+        console.log("What can run but never walks, Has a mouth but never talks, Has a bed but never sleeps, Has a head but never weeps? "+ second_riddle);
+        console.log("The maker doesnt want it, the buyer does not use it, but user does not see it. "+ third_riddle);
+        // if the riddle does NOT contain the word 'man', you get a wrong answer.
+        // not exactly the best way of doing this but this is the quickest way to umbrella all the ways people might type out the answer
+        if (!first_riddle.includes("man")){
+            console.log("wrong answer");
+            document.getElementById("checked_riddle_1").innerHTML ="The Sphinx is displeased";
+        }
+        // checks if the riddle does NOT contain river, if it doesn't you lose
+        else if (!second_riddle.includes("river")){
+            console.log("wrong answer");
+            document.getElementById("checked_riddle_2").innerHTML ="The Sphinx is displeased";
+        }
+        // checks if not coffin, if not you lose
+        else if (!third_riddle.includes("coffin")){
+            console.log("wrong answer");
+            document.getElementById("checked_riddle_3").innerHTML ="The Sphinx is displeased";
+        }
+        //clears all the previous lose messages and displays the success alert and secret meme.
+        else{
+            console.log("Riddles answered correctly");
+            alert("You have correctly answered the Sphinx's riddles.");
+            document.getElementById("checked_riddle_1").innerHTML ="";
+            document.getElementById("checked_riddle_2").innerHTML ="";
+            document.getElementById("checked_riddle_3").innerHTML ="";
+            document.getElementById("secret_meme").innerHTML ='<video onloadstart="this.volume=0.25" controls src="memes/examine_birb.mp4"></video>';
+    
+        }
+    
+        return false
+    }

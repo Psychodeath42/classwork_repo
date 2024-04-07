@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sphinx Riddles</title>
+    <script src="akashic_tome.js"></script>
+</head>
+<body>
+    <nav>
+        <h2>Navigation</h2>
+        <a href="./index.html">Home</a><br>
+        <a href="./boards.html">Boards</a><br>
+        <a href="./dice_game.html">Dice Game</a><br>
+        <a href="./strings.html">String Form</a><br>
+        <a href="./palidrome_checker.html">Pali-ment</a><br>
+        <a href="./sphinx_riddles.html">Sphinx</a><br>
+    </nav>
+    <h1>The Sphinx promises you great riches should you answer its three riddles correctly.</h1>
+
+    <form method="post" id="sphinx_form" onsubmit="return riddle_solver();">
+    
+        <label for="riddle_1">“What goes on four feet in the morning, two feet in midday, and three feet in the evening?” </label>
+        <input type="text" id="riddle_1" name="first_riddle"><br><br>
+
+        <label for="riddle_2">"What can run but never walks, Has a mouth but never talks, Has a bed but never sleeps, Has a head but never weeps?"</label>
+        <input type="text" id="riddle_2" name="second_riddle"><br><br>
+
+        <label for="riddle_3">"The maker doesnt want it, the buyer does not use it, but user does not see it."</label>
+        <input type="text" id="riddle_3" name="third_riddle"><br><br>
+
+        <input type="submit" value="submit">
+
+        <div id="checked_riddle_1"></div>
+        <div id="checked_riddle_2"></div>
+        <div id="checked_riddle_3"></div>
+        <div id="secret_meme"></div>
+    
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <script src="akashic_tome.js"></script>
+</head>
+<body>
+
+    <div id="game">
+        <h1>Blackjack</h1>
+        <button onclick="start_game()">Start Game</button>
+        <div id="status"></div>
+        <div id="player_hand"></div>
+        <div id="dealer_hand"></div>
+        <button id="hit_button" onclick="hit()">Hit</button>
+        <button id="stand_button" onclick="stand()">Stand</button>
+    </div>
+    
+    <script>
+    let deck = [];
+    const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
+    const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+    
+    const game = document.getElementById('game');
+    const status = document.getElementById('status');
+    const player_hand = document.getElementById('player_hand');
+    const dealer_hand = document.getElementById('dealer_hand');
+    const hit_button = document.getElementById('hit_button');
+    const stand_button = document.getElementById('stand_button');
+    
+    function start_game() {
+        deck = create_deck();
+        shuffle(deck);
+        player_hand.innerHTML = '';
+        dealer_hand.innerHTML = '';
+        deal_cards();
+        hit_button.disabled = false;
+        stand_button.disabled = false;
+    }
+    
+    function create_deck() {
+        const deck = [];
+        for (let suit of suits) {
+            for (let value of values) {
+                deck.push(`${value} of ${suit}`);
+            }
+        }
+        return deck;
+    }
+    
+    function shuffle(deck) {
+        for (let i = deck.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [deck[i], deck[j]] = [deck[j], deck[i]];
+        }
+    }
+    
+    function deal_cards() {
+        for (let i = 0; i < 2; i++) {
+            player_hand.innerHTML += `<div>${deck.pop()}</div>`;
+            dealer_hand.innerHTML += `<div>${deck.pop()}</div>`;
+        }
+    }
+    
+    function hit() {
+        player_hand.innerHTML += `<div>${deck.pop()}</div>`;
+        check_for_bust(player_hand);
+    }
+    
+    function stand() {
+        while (sum_hand(dealer_hand) < 17) {
+            dealer_hand.innerHTML += `<div>${deck.pop()}</div>`;
+        }
+        check_winner();
+    }
+    
+    function sum_hand(hand) {
+        let sum = 0;
+        let aces = 0;
+        for (let card of hand.children) {
+            const value = card.innerText.split(' ')[0];
+            if (value === 'A') {
+                aces++;
+                sum += 11;
+            } else if (['J', 'Q', 'K'].includes(value)) {
+                sum += 10;
+            } else {
+                sum += parseInt(value);
+            }
+        }
+        while (sum > 21 && aces > 0) {
+            sum -= 10;
+            aces--;
+        }
+        return sum;
+    }
+    
+    function check_for_bust(hand) {
+        if (sum_hand(hand) > 21) {
+            status.textContent = 'Bust! You lose.';
+            hit_button.disabled = true;
+            stand_button.disabled = true;
+        }
+    }
+    
+    function check_winner() {
+        const player_sum = sum_hand(player_hand);
+        const dealer_sum = sum_hand(dealer_hand);
+        if (player_sum > 21 || dealer_sum === 21 || (dealer_sum > player_sum && dealer_sum <= 21)) {
+            status.textContent = 'Dealer wins!';
+        } else if (player_sum === dealer_sum) {
+            status.textContent = 'It\'s a tie!';
+        } else {
+            status.textContent = 'Player wins!';
+        }
+        hit_button.disabled = true;
+        stand_button.disabled = true;
+    }
+    </script>
+    
+    </body>
+    </html>

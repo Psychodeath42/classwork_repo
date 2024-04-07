@@ -36,3 +36,9 @@ header {
     width: 100px;
     position: absolute;
 }
+#playerHand{
+    text-align: left;
+}
+#dealerHand{
+    text-align: right;
+}
