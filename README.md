@@ -10,3 +10,5 @@ repository for classwork
 16-3-24 palidrome checker and secret lizard dance
 
 29-3-24 wiggle a bit and ambience audio added
+
+7-4-24 Sphinx riddles added and boards page has been given new stuff, secret meme when solving sphinx. man, river, coffin
