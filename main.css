@@ -42,3 +42,12 @@ header {
 #dealerHand{
     text-align: right;
 }
+table{
+    width: 70%;
+    border-collapse: collapse; 
+}
+th,td{
+    border: 3px solid palevioletred;
+    text-align: left;
+    padding: 8px;
+}
