@@ -14,3 +14,5 @@ repository for classwork
 7-4-24 Sphinx riddles added and boards page has been given new stuff, secret meme when solving sphinx. man, river, coffin
 
 14-4-24 Sphinx and board pages now have tables in them.
+
+20-4-24 added the final.
