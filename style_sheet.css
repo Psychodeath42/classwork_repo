@@ -1,0 +1,64 @@
+/*sets the default background color and text color */
+body {
+    background-color: #421442; /* set your preferred background color */
+    background-image: url('');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #e4d1db; /* set your preferred text color */
+}
+/*sets the header text color, font, alignment, underline, and outerglow */
+h1 {
+    color: #420202;
+    text-align: center;
+    font-size: 72px;
+    text-decoration: underline;
+    text-decoration-thickness: 15px;
+    text-shadow:0 0 4px palevioletred;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+}
+/*pads to the left to make room on the screen, underlines the section headers, and changes font sizes for readability */
+h2 {
+    font-size: 36px;
+    padding-left: 25%;
+    text-decoration: underline;
+}
+h3{
+    font-size: 24px;
+    padding-left: 25%;
+    text-decoration-line: underline;
+}
+p{
+    font-size: 18px;
+    padding-left: 20%;
+    text-align: left;
+}
+
+
+
+
+
+/*other stuff i copied from old code that i will likely use later */
+/* nav properties */
+nav {
+    height: 800px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+}
+#media_display {
+    margin-left: 600px;
+}
+/* footer properties */
+footer {
+    text-align: center;
+    margin-right: 200px;
+}
+
+/* header properties */
+header {
+    text-align: center;
+}
