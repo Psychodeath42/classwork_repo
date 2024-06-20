@@ -6,25 +6,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W6 Assignment: Web Pages</title>
+    <!-- sets the backgroudn image only for this page -->
     <style>body{background-image: url('memes/forest.jpg'); background-size: auto;}</style>
 </head>
-<h1></h1>
-<body>
+<h2>Ode to Forgotten Memories</h2>
+<body> <!--really just a work around for it not working with only 1 <p1> tag. also I WROTE THIS POEM AINT THAT COOL-->
+    <p1>The sound of rushing water,<br></p1>
+    <p1>may some days soothe the soul,<br></p1>
+    <p1>The haunting crashing waves,<br></p1>
+    <p1>bring fellows deep below,<br></p1>
+    <p1>How I yearn for the passing winds,<br></p1>
+    <p1>to blow away the smoke,<br></p1>
+    <p1>But the ever lasting fire,<br></p1>
+    <p1>will burn down my fair boat.<br></p1>
+<!-- reusing my old mediadropdown menu, if it aint broke, don't fix it. i'll be using new memes though.-->
     <select id="mediaDropdown" onchange="displayMedia()">
         <option value="none">Clear</option>
         <option value="black_cat">Black Cat</option>
         <option value="hampsters_with_cat">Hampster Playing With Cat </option>
 
     </select>
-
+<!--where the dropdown menu places the meme-->
     <div id="media-display"></div><br>
-    <p1>The sound of rushing water,<br></p1>
-     <p1>may some days soothe the soul,<br></p1>
-     <p1>The haunting crashing waves,<br></p1>
-     <p1>bring fellows deep below,<br></p1>
-     <p1>How I yearn for the passing winds,<br></p1>
-     <p1>to blow away the smoke,<br></p1>
-     <p1>But the ever lasting fire,<br></p1>
-     <p1>will burn down my fair boat.<br></p1>
+    <!--picture, really just for fufilling requirement-->
+    <img id="ocean_picture" src="memes/ocean.jpeg">
     
 </body>
+<footer>
+    <!--i made the music at least fit with the picture, so it ties in. also goes good with my poem i wrote-->
+    <button id="arrivedeci" onclick="play_sound();">Arrivedeci</button>
+    <div id="sound_area"></div>
+</footer>
