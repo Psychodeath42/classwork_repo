@@ -13,5 +13,8 @@ The html has: a central-top aligned navigation bar, a css side scrollable galler
 Added the gallery, playground, and about me page.
 added lots of pictures, some memes, pic of me.
 the gallery page should show all the pictures, might need to scroll down. the footer *should* be transparent now, so if the pictures are behind it they *should* be visible.<br>
-playground just has things i worked on in csc104, don't got the time to write more with all the other finals i'm doing<br>
+playground just has things i worked on in csc102, don't got the time to write more with all the other finals i'm doing<br>
 i don't really know what else to put on the about me page. pretty bad i'll be honest, but i don't really know how much more i can prettify 3 div boxes <br>
+11/8/24<br>
+not many new changes, just cleared up some of the errors from the w3 validator<br>
+the ones left aren't actually breaking the website and aren't something i care about fixing<br>
