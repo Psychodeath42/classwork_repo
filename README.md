@@ -18,3 +18,5 @@ i don't really know what else to put on the about me page. pretty bad i'll be ho
 11/8/24<br>
 not many new changes, just cleared up some of the errors from the w3 validator<br>
 the ones left aren't actually breaking the website and aren't something i care about fixing<br>
+13/8/24<br>
+fixed a few broken links, improved the about me page.
