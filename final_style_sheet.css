@@ -155,16 +155,16 @@ div.code_box{
 div.text_box{
     margin: 5px;
     border: #555;
-    background-color: #e4e4e499;
+    background-color: #e4e4e4c2;
     width: 600px;
     max-height: 666px;
+    padding: 10px;
 }
 div.socials_box{
     margin: 5px;
     background-color: rgb(41, 41, 110);
     width: 200px;
     max-height: 444px;
-    margin-left: 6%;
     padding: 15px;
 }
 p5{
@@ -180,4 +180,7 @@ p7{
     color: antiquewhite;
     font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a:link{
+    color: red;
 }
